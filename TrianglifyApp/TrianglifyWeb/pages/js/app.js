@@ -15,7 +15,7 @@
 			controller.triangle.Error="";
 			console.log("Sending triangle:");
 			console.log(controller.triangle);
-            $http.post('api/trianglify/identifyPost', controller.triangle).then(
+            $http.post('/api/trianglify/identifyPost', controller.triangle).then(
 					function(response) {
 						console.log("success")
                         console.log(response);
@@ -29,7 +29,6 @@
 						console.log("error");
 						console.log(response);
                         controller.triangle.Error = response.data.Error;
-                        controller.triangle.Error = "teste";
 					});
 		};
 
