@@ -80,7 +80,7 @@ namespace TrianglifyWeb.BusinessObject
             else
             {
                 //Isosceles or Equilateral, max of both will decide..
-                triangle.TriangleType = (TriangleType)Math.Max(biggerSide, smallestSide);
+                triangle.TriangleType = (TriangleType)Math.Max(biggerSideFrequency, smallestSideFrequency);
             }
 
         }

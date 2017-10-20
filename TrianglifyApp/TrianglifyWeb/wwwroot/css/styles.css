@@ -1,0 +1,12 @@
+﻿@import 'bootstrap';
+
+body h1 {
+    color: $brand-primary;
+}
+.ng-invalid.ng-dirty {
+    border-color: RED;
+}
+
+.ng-valid.ng-dirty {
+    border-color: GREEN;
+}

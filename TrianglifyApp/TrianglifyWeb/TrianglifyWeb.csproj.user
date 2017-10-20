@@ -28,13 +28,22 @@
           <SQLDebugging>False</SQLDebugging>
           <ExternalProgram>
           </ExternalProgram>
-          <StartExternalURL>http://localhost:50654/trianglify/identify?sideA=2&amp;sideB=3&amp;sideC=4</StartExternalURL>
+          <StartExternalURL>http://localhost:50654/index.html</StartExternalURL>
           <StartCmdLineArguments>
           </StartCmdLineArguments>
           <StartWorkingDirectory>
           </StartWorkingDirectory>
           <EnableENC>True</EnableENC>
           <AlwaysStartWebServerOnDebug>True</AlwaysStartWebServerOnDebug>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50654/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

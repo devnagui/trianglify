@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="pyramid">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pyramid</title>
+    <link href="wwwroot/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="wwwroot/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Triangle Identificator</h1>
+        <form name="triangleForm" ng-controller="TriangleController as triangleCtrl" ng-submit="triangleCtrl.identify()">
+
+            <div class="container">
+                <div class="row ">
+                    <label ng-show="triangleCtrl.triangle.Error" class="col-md-1">Error:</label>
+                    <p name="Error" ng-model="triangleCtrl.triangle.Error" class="col-md-10" ng-show="triangleCtrl.triangle.Error">
+                        {{triangleCtrl.triangle.Error}}
+                    </p>
+                </div>
+                <div class="row">
+                    <label ng-show="triangleCtrl.triangle.TriangleType" class="col-md-1">Type:</label>
+                    <input name="triangleType" class="col-md-2" ng-model="triangleCtrl.triangle.TriangleType" ng-show="triangleCtrl.triangle.TriangleType" />
+                </div>
+            </div>
+            <div class="container">
+                <div class="row ">
+                    <label class="col-md-1">Side A:</label><input ng-model="triangleCtrl.triangle.SideA" type="number" step="0.01" min="0.01" max="999999" class="col-md-2" required="true" />
+                    <label class="col-md-1">Side B:</label><input ng-model="triangleCtrl.triangle.SideB" type="number" step="0.01" min="0.01" max="999999" class="col-md-2" required="true" />
+                    <label class="col-md-1">Side C:</label><input ng-model="triangleCtrl.triangle.SideC" type="number" step="0.01" min="0.01" max="999999" class="col-md-2" required="true" />
+                    <input name="submit" value="Identify" type="submit" class="col-md-1" />
+                </div>
+
+            </div>
+        </form>
+        <h4>source code: https://github.com/devnagui/trianglify</h4>
+    </div>
+
+    <script type="text/javascript" src="wwwroot/js/angular.js"></script>
+    <script type="text/javascript" src="wwwroot/js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>    
+    <script type="text/javascript" src="wwwroot/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -11,50 +11,51 @@ using TrianglifyWeb.Model;
 
 namespace TrianglifyWeb.Controllers
 {
-   [RoutePrefix("trianglify")]
+    [RoutePrefix("api/trianglify")]
     public class TrianglifyController : ApiController
     {
 
         IPolygonIdentificator<Model.Triangle> triangleIdentificator = new TriangleIdenfier();
-       
-        // GET: api/Trianglify/5
-        //public string Get(int id)
-        //{
-        //    return "value";
-       // }
 
-
-        [Route("identify")]
+        [Route("identifyGet")]
         [HttpGet()]
         [AcceptVerbs("GET")]
-        public JsonResult<TriangleVO> IdentifyURI([FromUri]Double sideA, [FromUri]Double sideB, [FromUri]Double sideC)
+        public JsonResult<TriangleVO> IdentifyGet([FromUri]Double sideA, [FromUri]Double sideB, [FromUri]Double sideC)
         {
             TriangleVO tvo = new TriangleVO();
+             
             try
             {
-                tvo.Triangle = triangleIdentificator.Identify(new Model.Triangle(sideA, sideB, sideC)); ;
+                tvo.TriangleType = Enum.GetName(typeof(TriangleType), triangleIdentificator.Identify(new Triangle(tvo.SideA, tvo.SideB, tvo.SideC)).TriangleType);
             }
             catch (InvalidTriangleException e)
             {
-                tvo.Exception = e;
+                tvo.Error = (e.Message.ToString());
+                StatusCode(HttpStatusCode.InternalServerError);
             }
             return Json(tvo);
 
         }
 
-        // POST: api/Trianglify
-        // public void Post([FromBody]string value)
-        //   {
-        //  }
+        [Route("identifyPost")]
+        [HttpPost()]
+        [AcceptVerbs("POST")]
+        public JsonResult<TriangleVO> IdentifyPost([FromBody]TriangleVO tvo)
+        {
 
-        // PUT: api/Trianglify/5
-        //   public void Put(int id, [FromBody]string value)
-        //{
-        //  }
+            try
+            {
+                tvo.TriangleType=Enum.GetName(typeof(TriangleType), triangleIdentificator.Identify(new Triangle(tvo.SideA, tvo.SideB, tvo.SideC)).TriangleType);
+            }
+            catch (InvalidTriangleException e)
+            {
+                tvo.Error = (e.Message.ToString());
+                StatusCode(HttpStatusCode.InternalServerError);
 
-        // DELETE: api/Trianglify/5
-        //  public void Delete(int id)
-        //{
-        //  }
+            }
+            
+            return Json(tvo);
+
+        }
     }
 }
