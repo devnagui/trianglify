@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/TrianglifyApp/TrianglifyWeb/obj
+/TrianglifyApp/packages
+/TrianglifyApp/Trianglefy/obj/x64/Debug
+/TrianglifyApp/.vs
+/.vs
