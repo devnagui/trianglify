@@ -160,12 +160,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
     <Content Include="wwwroot\css\bootstrap-theme.css" />
     <Content Include="wwwroot\css\bootstrap-theme.min.css" />
     <Content Include="wwwroot\css\bootstrap.css" />
     <Content Include="wwwroot\css\bootstrap.min.css" />
     <Content Include="wwwroot\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="wwwroot\index.html" />
     <Content Include="wwwroot\js\bootstrap.js" />
     <Content Include="wwwroot\js\bootstrap.min.js" />
     <Content Include="wwwroot\css\styles.css" />
