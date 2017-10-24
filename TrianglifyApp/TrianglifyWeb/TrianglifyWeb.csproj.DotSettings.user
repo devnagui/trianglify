@@ -1,0 +1,5 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	
+	<s:Boolean x:Key="/Default/Environment/RuntimeUsedReferences/SolutionImplicitUsedModulesNames/=Microsoft_002EAspNet_002EWebApi_002EClient/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/RuntimeUsedReferences/SolutionImplicitUsedModulesNames/=Newtonsoft_002EJson/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/RuntimeUsedReferences/SolutionImplicitUsedModulesNames/=System_002ENet_002EHttp_002EFormatting/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
